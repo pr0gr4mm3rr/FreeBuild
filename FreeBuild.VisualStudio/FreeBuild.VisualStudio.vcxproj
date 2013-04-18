@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8FAB86AE-41EE-4EFF-A945-F49BEDE04E98}</ProjectGuid>
+    <RootNamespace>FreeBuildVisualStudio</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(ProjectDir)\..\..\glsdk\glfw\include;$(ProjectDir)\..\..\support\boost;$(ProjectDir)\..\..\rocket\Include;$(ProjectDir)\..\..\glsdk\glload\include;$(ProjectDir)\..\..\support\python\PC;$(ProjectDir)\..\..\support\python\Include;$(ProjectDir)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\..\..\support\python\PCBuild;$(ProjectDir)\..\..\support\boost\stage\lib;$(ProjectDir)\..\..\support\freetype\lib;$(ProjectDir)\..\..\rocket\Build\cmake_build\Debug;$(ProjectDir)\..\..\glsdk\glfw\library;$(ProjectDir)\..\..\glsdk\glload\lib;$(LibraryPath)</LibraryPath>
+    <IntDir>$(Configuration)\..\build\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(ProjectDir)\..\..\glsdk\glfw\include;$(ProjectDir)\..\..\support\boost;$(ProjectDir)\..\..\rocket\Include;$(ProjectDir)\..\..\glsdk\glload\include;$(ProjectDir)\..\..\support\python\PC;$(ProjectDir)\..\..\support\python\Include;$(ProjectDir)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\..\..\support\python\PCBuild;$(ProjectDir)\..\..\support\boost\stage\lib;$(ProjectDir)\..\..\support\freetype\lib;$(ProjectDir)\..\..\rocket\Build\cmake_build\Release;$(ProjectDir)\..\..\glsdk\glfw\library;$(ProjectDir)\..\..\glsdk\glload\lib;$(LibraryPath)</LibraryPath>
+    <IntDir>$(Configuration)\..\build\</IntDir>
+    <TargetName>FreeBuild</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;glfwD.lib;glloadD.lib;python27_d.lib;RocketCore_d.lib;RocketControls_d.lib;_rocketcore_d.lib;_rocketcontrols_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;glfw.lib;glload.lib;python27.lib;RocketCore.lib;RocketControls.lib;_rocketcore.lib;_rocketcontrols.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\FreeBuild\Console\PyConsole.cpp" />
+    <ClCompile Include="..\FreeBuild\Console\PyInterpreter.cpp" />
+    <ClCompile Include="..\FreeBuild\Drivers\AbstractDriver.cpp" />
+    <ClCompile Include="..\FreeBuild\Drivers\DriverPyImpl.cpp" />
+    <ClCompile Include="..\FreeBuild\Drivers\GFXDriver.cpp" />
+    <ClCompile Include="..\FreeBuild\GFX\GFXBufferManager.cpp" />
+    <ClCompile Include="..\FreeBuild\GFX\GFXFramebuffer.cpp" />
+    <ClCompile Include="..\FreeBuild\GFX\GFXGLObject.cpp" />
+    <ClCompile Include="..\FreeBuild\GFX\GFXPipeline.cpp" />
+    <ClCompile Include="..\FreeBuild\main.cpp" />
+    <ClCompile Include="..\FreeBuild\UI\ShellFileInterface.cpp" />
+    <ClCompile Include="..\FreeBuild\UI\ShellRenderInterfaceOpenGL.cpp" />
+    <ClCompile Include="..\FreeBuild\UI\ShellSystemInterface.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\FreeBuild\Console\PyConsole.h" />
+    <ClInclude Include="..\FreeBuild\Console\PyInterpreter.h" />
+    <ClInclude Include="..\FreeBuild\Drivers\AbstractDriver.h" />
+    <ClInclude Include="..\FreeBuild\Drivers\DriverPyImpl.h" />
+    <ClInclude Include="..\FreeBuild\Drivers\GFXDriver.h" />
+    <ClInclude Include="..\FreeBuild\GFX\GFXBufferManager.h" />
+    <ClInclude Include="..\FreeBuild\GFX\GFXFramebuffer.h" />
+    <ClInclude Include="..\FreeBuild\GFX\GFXGLObject.h" />
+    <ClInclude Include="..\FreeBuild\GFX\GFXPipeline.h" />
+    <ClInclude Include="..\FreeBuild\UI\Shell.h" />
+    <ClInclude Include="..\FreeBuild\UI\ShellFileInterface.h" />
+    <ClInclude Include="..\FreeBuild\UI\ShellOpenGL.h" />
+    <ClInclude Include="..\FreeBuild\UI\ShellRenderInterfaceOpenGL.h" />
+    <ClInclude Include="..\FreeBuild\UI\ShellSystemInterface.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FreeBuild.VisualStudio.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

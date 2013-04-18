@@ -1,0 +1,13 @@
+Changes made to FreeBuild code for working with MSVC
+	Added unistd.h (see Includes folder) to replace unix version
+	Moved declaration of rocketOnline from GFXDriver.h class proto to GFXDriver.cpp constructor
+	Changed include in AbstractDriver.cpp from to "../Console/PyInterpreter.h"
+	Changed include in main.cpp to "Drivers/DriverPyImpl.h"
+	Added logic in ShellSystemInterface.cpp to load iostream if in Visual Studio
+	Added login in main.cpp to not do 'using namespace std', shared_ptr was ambiguous
+	Changed include in GFXDriver.h to "../Console/PyInterpreter.h"
+	
+	Added glfwSwapInterval in GFXPipeline to vsync (not max thread at 2500fps)
+
+Changes made to python scripts
+	removed leading / from document path in scripts/ui/main_menu.py

@@ -50,3 +50,12 @@ lib/libRocket
 
 *.opensdf
 
+FreeBuild.VisualStudio/build
+
+FreeBuild.VisualStudio/ipch
+
+FreeBuild.VisualStudio/Debug
+
+FreeBuild.VisualStudio/Release
+
+FreeBuild.VisualStudio/*.sdf

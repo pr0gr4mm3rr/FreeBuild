@@ -8,7 +8,7 @@
 
 #include "GFXDriver.h"
 #include "../GFX/GFXPipeline.h"
-#include "PyInterpreter.h"
+#include "../Console/PyInterpreter.h"
 #include <Rocket/Core.h>
 #include "../UI/ShellSystemInterface.h"
 #include "../UI/ShellRenderInterfaceOpenGL.h"
@@ -21,6 +21,7 @@ gfxCtx(NULL),
 uiHandle(),
 renderInterface(new ShellRenderInterfaceOpenGL()),
 systemInterface(new ShellSystemInterface(this)){
+	rocketOnline = false;
 	char buf[512];
 	
 	

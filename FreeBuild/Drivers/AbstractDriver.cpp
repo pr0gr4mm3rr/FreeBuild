@@ -7,7 +7,7 @@
 //
 
 #include "AbstractDriver.h"
-#include "PyInterpreter.h"
+#include "../Console/PyInterpreter.h"
 
 
 AbstractDriver::AbstractDriver() : pcon(NULL) , settings(){;}

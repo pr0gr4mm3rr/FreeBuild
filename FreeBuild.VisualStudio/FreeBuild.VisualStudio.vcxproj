@@ -72,7 +72,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\FreeBuild\Console\PyConsole.cpp" />
     <ClCompile Include="..\FreeBuild\Console\PyInterpreter.cpp" />
     <ClCompile Include="..\FreeBuild\Drivers\AbstractDriver.cpp" />
     <ClCompile Include="..\FreeBuild\Drivers\DriverPyImpl.cpp" />
@@ -87,7 +86,6 @@
     <ClCompile Include="..\FreeBuild\UI\ShellSystemInterface.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\FreeBuild\Console\PyConsole.h" />
     <ClInclude Include="..\FreeBuild\Console\PyInterpreter.h" />
     <ClInclude Include="..\FreeBuild\Drivers\AbstractDriver.h" />
     <ClInclude Include="..\FreeBuild\Drivers\DriverPyImpl.h" />

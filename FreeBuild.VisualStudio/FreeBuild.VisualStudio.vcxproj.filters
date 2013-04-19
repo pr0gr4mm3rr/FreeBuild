@@ -51,9 +51,6 @@
     <ClCompile Include="..\FreeBuild\UI\ShellSystemInterface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\FreeBuild\Console\PyConsole.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\FreeBuild\Console\PyInterpreter.h">
@@ -96,9 +93,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\FreeBuild\Console\PyConsole.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

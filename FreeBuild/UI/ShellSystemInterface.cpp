@@ -29,7 +29,11 @@
 #include "Shell.h"
 #include <GL/glfw.h>
 #include <Rocket/Core.h>
-#include <iostream.h>
+#ifdef _MSC_VER
+	#include <iostream>
+#else
+	#include <iostream.h>
+#endif
 
 typedef void (*glfwToggleFunc)(int);
 typedef bool (Rocket::Core::Context::*KeyUpDownFunc)(Rocket::Core::Input::KeyIdentifier,int);

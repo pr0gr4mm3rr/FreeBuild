@@ -46,7 +46,7 @@ namespace GFX{
 		shared_ptr<ShellSystemInterface> systemInterface;
 		shared_ptr<ShellRenderInterfaceOpenGL> renderInterface;
 		shared_ptr<ShellFileInterface> fileInterface;
-		bool rocketOnline = false;
+		bool rocketOnline;
 		
 	};
 };

@@ -12,9 +12,11 @@
 #include "Console/PyInterpreter.h"
 #include "Drivers/AbstractDriver.h"
 #include <boost/shared_ptr.hpp>
-#include "DriverPyImpl.h"
+#include "Drivers/DriverPyImpl.h"
 
+#ifndef _MSC_VER
 using namespace std;
+#endif
 
 int main(int argc, char * argv[])
 {

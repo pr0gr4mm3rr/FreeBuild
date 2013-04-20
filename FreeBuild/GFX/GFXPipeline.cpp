@@ -39,6 +39,8 @@ shared_ptr<GFX::Context> GFX::init(){
 		std::cerr << "Unable to open GLFW window" << std::endl;
 	}
 	glfwSetWindowTitle("FreeBuild Engine Demo");
+	// Enable VSync
+	glfwSwapInterval(1);
 	
 	if(glload::LoadFunctions() == glload::LS_LOAD_FAILED){
 		retcode = -1;

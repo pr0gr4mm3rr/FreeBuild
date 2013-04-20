@@ -7,6 +7,7 @@
 //
 
 #include "PyInterpreter.h"
+#include "PyConsole.h"
 #include <unistd.h>
 #include <boost/python/detail/wrap_python.hpp>
 
@@ -59,6 +60,9 @@ Console::Python::Python(int argc, char* argv[]){
 					"Check that it exists, and that you have "
 					"permission to read it."<<std::endl;
 	}
+
+	// Create a thread to run the console
+	Console * foo = new Console(&shared_ptr<Python>(this));
 }
 
 Console::Python::~Python(){

@@ -53,6 +53,7 @@ namespace Console{
 		object exec(str code, object globals = object(), object locals = object());
 		object exec_file(str filename, object globals = object(), object locals = object());
 		bool check_py_callable(object obj);
+		object main_namespace;
 	};
 };
 

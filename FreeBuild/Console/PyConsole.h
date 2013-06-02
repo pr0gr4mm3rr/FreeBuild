@@ -25,11 +25,6 @@ namespace Console{
 		void pyconsole();
 	private:
 		shared_ptr<Python> pycon;
-		std::string oneLine(std::string);
-		std::string escape(std::string);
-
-		object things[256];
-		int pos;
 	};
 };
 

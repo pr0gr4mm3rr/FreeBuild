@@ -61,8 +61,8 @@ Console::Python::Python(int argc, char* argv[]){
 					"permission to read it."<<std::endl;
 	}
 
-	// Create a thread to run the console
-	Console * foo = new Console(&shared_ptr<Python>(this));
+	// Create a console thing
+	ConsoleClass();
 }
 
 Console::Python::~Python(){
